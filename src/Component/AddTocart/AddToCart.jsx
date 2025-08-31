@@ -1,22 +1,22 @@
-import { memo, useContext } from "react"
-import CartContext from "../../Context/CartContext"
+import { memo } from "react"
+import { useDispatch, useSelector } from "react-redux"
 
-export default function AddToCart( {product }) {
+export default function AddToCart({ product }) {
 
-const { descQuantity, increaseQuantity,cart} = useContext(CartContext);
-
+    const dispatch = useDispatch();
+    const quantity = useSelector((state) => state?.cart?.items[product?.id]?.quantity || 0);
     const increase = () => {
-        increaseQuantity(product)
+        dispatch({ type: "ADD_TO_CART", payload: product })
     }
     const desc = () => {
-        descQuantity(product)
+        dispatch({ type: "REMOVE_FROM_CART", payload: product })
     }
 
-    console.log("AddToCart ",product.id)
+    console.log("AddToCart ", product.id)
 
     return <>
-        {!cart[product.id] ? <button onClick={increase}>Add To Cart</button> : <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <button onClick={increase}>+</button> {cart[product.id].quantity} <button onClick={desc}>-</button>
+        {!quantity ? <button onClick={increase}>Add To Cart</button> : <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <button onClick={increase}>+</button> {quantity} <button onClick={desc}>-</button>
         </div>
         }
     </>
