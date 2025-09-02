@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import { useState } from 'react';
 import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import CartContext from './Context/CartContext';
