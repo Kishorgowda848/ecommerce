@@ -1,0 +1,12 @@
+.btn {
+    bottom: 1rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 3.57rem;
+}
+
+.no-of-tems {
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}

@@ -17,10 +17,10 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
     }, [])
 
     console.log("Product ....")
-    return <>
+    return <div style={{display:'flex',    flexWrap: 'wrap'}}>
     <Link to="/cart">View Cart</Link>
         {loading ? <p>Loading ...</p> : list.map(product => {
             return <ProductCard product={product} key={product.title}/>
         })}
-    </>;
+    </div>;
 });
