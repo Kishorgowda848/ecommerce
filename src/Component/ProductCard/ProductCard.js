@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
             <a>{product.title}</a>
         </div>
         {/* <Rating rating={product.rating.value} /> */}
-        <b>₹ {product.price.value}</b>
+        <h3><b>₹ {product.price.value}</b></h3>
         <AddToCart product={product} />
         {/* <p>{widthHeight.width}</p> */}
     </div>

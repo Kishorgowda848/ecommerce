@@ -1,9 +1,6 @@
 .btn {
-    bottom: 1rem;
-    position: absolute;
     display: flex;
     justify-content: center;
-    left: 3.57rem;
 }
 
 .no-of-tems {

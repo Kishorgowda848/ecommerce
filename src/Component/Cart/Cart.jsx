@@ -6,6 +6,8 @@ export default function Cart() {
     const values = Object.values(cart);
 
         console.log("Cart ...");
+            console.log(cart);
+
     return <>
         {values.map(product => {
             return <li key={product.title}>

@@ -5,7 +5,10 @@
     width: 10rem;
     padding: 1rem;
     position: relative;
-    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 .proudct-title {
@@ -21,4 +24,8 @@ img {
 .card b {
     position: absolute;
     bottom: 3rem;
+}
+
+.card:hover{
+    scale: 1.05;
 }

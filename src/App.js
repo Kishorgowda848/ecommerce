@@ -4,6 +4,7 @@ import CartContext from './Context/CartContext';
 import Products from './pages/Products';
 import CartPage from './pages/CartPage';
 import NotFoundPage from './pages/NotFoundPage';
+import Header from './Component/Header'
 function App() {
 
   const [cart, setcart] = useState({});
@@ -36,6 +37,7 @@ function App() {
   return (
     <div className="App">
       <CartContext.Provider value={{ descQuantity, increaseQuantity, cart }}>
+        <Header/>
         <Switch>
           <Route path="/cart" exact="true" component={CartPage} />
           <Route path="/" exact="true" component={Products} match="true" />
