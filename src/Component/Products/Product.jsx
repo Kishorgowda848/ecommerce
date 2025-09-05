@@ -1,6 +1,5 @@
-import { memo, useContext, useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import ProductCard from '../ProductCard';
-import CartContext from '../../Context/CartContext';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
  export default memo(function Product() {
@@ -15,11 +14,6 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
         }).then(res => {
             setList(res);
         })
-        // getProductListFromApi(res => {
-        //     console.log("API Calling ...")
-        //     setLoading(false);
-        //     setList(res);
-        // });
     }, [])
 
     console.log("Product ....")

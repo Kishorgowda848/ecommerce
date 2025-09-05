@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import useWindowSize from '../../hooks/useWindowSize'
 import AddToCart from '../AddTocart'
 import Rating from '../Rating'
